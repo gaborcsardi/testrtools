@@ -16,6 +16,8 @@ jobs:
           config:
             - {os: windows-latest, r: 'release', rtools: '42', windows-path-include-mingw: 'false'}
             - {os: windows-latest, r: 'release', rtools: '', windows-path-include-mingw: 'false'}
+            - {os: windows-latest, r: '3.6', rtools: '', windows-path-include-mingw: 'false'}
+            - {os: windows-latest, r: '3.6', rtools: '', windows-path-include-mingw: 'true'}
 
       env:
         GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}

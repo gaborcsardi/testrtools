@@ -9,13 +9,13 @@ name: R-CMD-check
 jobs:
   R-CMD-check:
       runs-on: ${{ matrix.config.os }}
-      name: ${{ matrix.config.os }} (${{ matrix.config.r }})
+      name: ${{ matrix.config.os }} (${{ matrix.config.r }}) (${{ matrix.config.rtools }})
       strategy:
         fail-fast: false
         matrix:
           config:
             - {os: windows-latest, r: 'release', rtools: '42', windows-path-include-mingw: 'false'}
-            - {os: windows-latest, r: 'release', rtools: '42', windows-path-include-mingw: 'false'}
+            - {os: windows-latest, r: 'release', rtools: '', windows-path-include-mingw: 'false'}
 
       env:
         GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}

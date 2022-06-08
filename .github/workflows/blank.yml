@@ -30,4 +30,4 @@ jobs:
             windows-path-include-mingw: ${{ matrix.config.windows-path-include-mingw }}
         - shell: bash
           run: |
-            echo $PATH
+            sed 's/:/\n/g' <<< $PATH

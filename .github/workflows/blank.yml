@@ -31,6 +31,5 @@ jobs:
             r-version: ${{ matrix.config.r }}
             rtools-version: ${{ matrix.config.rtools }}
             windows-path-include-mingw: ${{ matrix.config.windows-path-include-mingw }}
-        - shell: bash
-          run: |
-            sed 's/:/\n/g' <<< $PATH
+        - run: |
+            $env:path.split(";")

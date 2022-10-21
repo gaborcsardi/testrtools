@@ -28,6 +28,7 @@ jobs:
             r-version: ${{ matrix.config.r }}
         - run: |
             $env:path.split(";")
+            dir "c:\program files\gs"
         - run: |
             tools::find_gs_cmd()
             Sys.which("gswin64c")

@@ -38,4 +38,4 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2-branch
         with:
-          extra-packages: XML
+          pak-version: devel

@@ -38,7 +38,5 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2-branch
         with:
-          packages: XML, any::sessioninfo
-          extra-packages: any::rcmdcheck
+          packages: XML
           needs: check
-          pak-version: devel

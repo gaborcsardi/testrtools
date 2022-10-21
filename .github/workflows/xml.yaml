@@ -41,3 +41,4 @@ jobs:
           packages: any::XML, any::sessioninfo
           extra-packages: any::rcmdcheck
           needs: check
+          pak-version: devel
